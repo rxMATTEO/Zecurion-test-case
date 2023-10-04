@@ -18,12 +18,12 @@ defineProps({
       <span>{{ date.value }}</span>
     </td>
   </tr>
-  <tr class="list" v-for="item in tasks" :key="item.value">
+  <tr class="list" v-for="task in tasks" :key="task.value">
     <td class="table-data">
-      <input type="text" v-model="item.value" />
+      <input type="text" v-model="task.value" />
     </td>
     <td v-for="date in dates" :key="date.value" class="table-data">
-      <StatusSwitch :statuses="statuses" />
+      <StatusSwitch :date="date" :task="task" :statuses="statuses" />
     </td>
   </tr>
 </table>

@@ -1,24 +1,37 @@
 <script setup>
 import { computed, ref, watch } from 'vue';
+import { useLogStore } from '@/stores/logStore';
+import useId from '@/composables/useId';
 
 const props = defineProps({
   statuses: Array,
+  task: Object,
+  date: Object,
 });
 
+const logStore = useLogStore();
 const isStatusesEmpty = computed(() => props.statuses.length === 0);
 const isClicked = ref(false);
 const emptyMessage = 'Список пуст';
 
+const status = ref(props.statuses[0]?.value);
+const selectedStatus = computed({
+  get: () => isStatusesEmpty.value ? null: props.statuses[0].value,
+  set: (value) => {
+    status.value = value;
+    return value;
+  }
+});
+
 function switchStatus() {
   isClicked.value = true;
-
+  logStore.addLog({
+    task: props.task,
+    date: props.date,
+    status: status,
+    id: useId(),
+  });
 }
-
-const selectedStatus = ref(props.statuses[0].value);
-
-watch(selectedStatus, () => {
-  console.log(selectedStatus.value);
-});
 </script>
 
 <template>

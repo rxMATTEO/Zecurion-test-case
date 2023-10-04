@@ -9,5 +9,8 @@ export const useLogStore = defineStore('logStore', {
   getters: {
   },
   actions: {
+    addLog(log) {
+      this.logs.push(log);
+    },
   }
 });
