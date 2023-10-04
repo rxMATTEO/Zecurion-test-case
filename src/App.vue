@@ -21,6 +21,6 @@ watch(tasks.value, (oldValue, newValue) => {
 <style scoped>
 .collections {
   display: flex;
-  gap: 100px;
+  gap: 20px;
 }
 </style>

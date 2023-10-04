@@ -38,7 +38,7 @@ function pushItem(value) {
 
 <style scoped>
 .collection {
-  border: 1px solid grey;
+  border: 1px solid lightgray;
   padding: 10px 40px;
   .item {
     display: flex;
