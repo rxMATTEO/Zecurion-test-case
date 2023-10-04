@@ -11,10 +11,10 @@ watch(tasks.value, (oldValue, newValue) => {
 
 <template>
   <div class="collections">
-    <CollectionInput @update:value="(newTask) => tasks.push(newTask)" :value="tasks" placeholder="Введите значение tasks" />
-    <CollectionInput @update:value="(newTask) => tasks.push(newTask)" :value="tasks" placeholder="Введите значение tasks" />
-    <CollectionInput @update:value="(newTask) => tasks.push(newTask)" :value="tasks" placeholder="Введите значение tasks" />
-    <CollectionInput @update:value="(newTask) => tasks.push(newTask)" :value="tasks" placeholder="Введите значение tasks" />
+    <CollectionInput @update:value="(newValue) => tasks = newValue" :value="tasks" placeholder="Введите значение tasks" />
+    <CollectionInput @update:value="(newValue) => tasks = newValue" :value="tasks" placeholder="Введите значение tasks" />
+    <CollectionInput @update:value="(newValue) => tasks = newValue" :value="tasks" placeholder="Введите значение tasks" />
+    <CollectionInput @update:value="(newValue) => tasks = newValue" :value="tasks" placeholder="Введите значение tasks" />
   </div>
 </template>
 
