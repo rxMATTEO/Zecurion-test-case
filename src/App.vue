@@ -1,7 +1,7 @@
 <script setup>
 import CollectionInput from "@/components/CollectionInput.vue";
 import Tasks from "@/components/Tasks.vue";
-import {ref, watch} from "vue";
+import {ref} from "vue";
 import Logger from "@/components/Logger.vue";
 
 const tasks = ref([]);

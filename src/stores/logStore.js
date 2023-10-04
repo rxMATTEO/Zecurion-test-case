@@ -1,10 +1,10 @@
-import {defineStore} from "pinia";
+import { defineStore } from 'pinia';
 
 export const useLogStore = defineStore('logStore', {
   state: () => {
     return {
       logs: [],
-    }
+    };
   },
   getters: {
   },
