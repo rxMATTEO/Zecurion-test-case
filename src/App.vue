@@ -1,8 +1,8 @@
 <script setup>
-import CollectionInput from "@/components/CollectionInput.vue";
-import Tasks from "@/components/Tasks.vue";
-import {ref} from "vue";
-import Logger from "@/components/Logger.vue";
+import CollectionInput from '@/components/CollectionInput.vue';
+import Tasks from '@/components/Tasks.vue';
+import { ref } from 'vue';
+import Logger from '@/components/Logger.vue';
 
 const tasks = ref([]);
 const dates = ref([]);

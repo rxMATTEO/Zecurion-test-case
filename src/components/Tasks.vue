@@ -1,5 +1,5 @@
 <script setup>
-import StatusSwitch from "@/components/StatusSwitch.vue";
+import StatusSwitch from '@/components/StatusSwitch.vue';
 
 defineProps({
   tasks: Array,

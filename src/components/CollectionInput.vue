@@ -1,6 +1,6 @@
 <script setup>
-import {ref} from "vue";
-import useId from "@/composables/useId";
+import { ref } from 'vue';
+import useId from '@/composables/useId';
 
 const props = defineProps({
   placeholder: String,
@@ -10,7 +10,7 @@ const emit = defineEmits(['update:value']);
 const inputValue = ref('');
 
 function removeItem(id) {
- emit('update:value', props.value.filter(item => item.id !== id));
+  emit('update:value', props.value.filter(item => item.id !== id));
 }
 
 function pushItem(value) {
