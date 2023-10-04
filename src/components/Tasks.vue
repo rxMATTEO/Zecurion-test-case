@@ -7,25 +7,23 @@ defineProps({
 </script>
 
 <template>
-<div>
-  <div class="tasks">
-    <div class="header">
+<table class="tasks">
+  <tr>
+    <td class="header">
       <p>Задачи/даты</p>
-    </div>
-    <div class="list">
-      <div v-for="item in tasks" :key="item">
-        <input type="text" v-model="item.value" />
-      </div>
-    </div>
-  </div>
-</div>
+    </td>
+  </tr>
+  <tr class="list" v-for="item in tasks" :key="item">
+    <td>
+      <input type="text" v-model="item.value" />
+    </td>
+  </tr>
+</table>
 </template>
 
 <style scoped>
 .tasks {
   border: var(--border);
-  display: flex;
-  flex-direction: column;
   .header {
     padding: 0 40px;
     color: var(--text-secondary);
