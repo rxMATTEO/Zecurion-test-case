@@ -1,8 +1,8 @@
 <script setup>
 import CollectionInput from '@/components/CollectionInput.vue';
-import Tasks from '@/components/Tasks.vue';
 import { ref } from 'vue';
-import Logger from '@/components/Logger.vue';
+import TasksLogger from '@/components/TasksLogger.vue';
+import TasksTable from '@/components/TasksTable.vue';
 
 const tasks = ref([]);
 const dates = ref([]);
@@ -14,8 +14,8 @@ const statuses = ref([]);
     <CollectionInput @update:value="(newValue) => tasks = newValue" :value="tasks" placeholder="Введите значение tasks" />
     <CollectionInput @update:value="(newValue) => dates = newValue" :value="dates" placeholder="Введите значение dates" />
     <CollectionInput @update:value="(newValue) => statuses = newValue" :value="statuses" placeholder="Введите значение statuses" />
-    <Logger />
-    <Tasks :tasks="tasks" :dates="dates" :statuses="statuses" />
+    <TasksLogger />
+    <TasksTable :tasks="tasks" :dates="dates" :statuses="statuses" />
   </div>
 </template>
 
