@@ -7,9 +7,6 @@ import Logger from "@/components/Logger.vue";
 const tasks = ref([]);
 const dates = ref([]);
 const statuses = ref([]);
-
-watch(tasks.value, (oldValue, newValue) => {
-});
 </script>
 
 <template>
