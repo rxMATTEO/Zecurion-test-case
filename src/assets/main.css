@@ -11,6 +11,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.remove {
+  cursor: pointer;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;

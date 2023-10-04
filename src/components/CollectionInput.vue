@@ -31,7 +31,7 @@ function pushItem(value) {
     <div v-for="item in value" :key="item" class="item">
       <span>{{ item.id }}</span>
       <span>{{ item.value }}</span>
-      <span @click="removeItem(item.id)">X</span>
+      <span @click="removeItem(item.id)" class="remove">X</span>
     </div>
   </div>
 </div>

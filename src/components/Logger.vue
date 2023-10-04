@@ -13,6 +13,7 @@ const { logs } = storeToRefs(loggerStore);
     <span>{{ log.date.value }}</span>
     <span>{{ log.task.value }}</span>
     <span>{{ log.status }}</span>
+    <span @click="loggerStore.removeLog(log.id)" class="remove">X</span>
   </div>
 </div>
 </template>
