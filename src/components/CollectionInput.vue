@@ -14,6 +14,7 @@ function removeItem(id) {
 }
 
 function pushItem(value) {
+  if (!value) return;
   props.value.push({ value: value, id: useId() });
   emit('update:value', props.value);
 }
