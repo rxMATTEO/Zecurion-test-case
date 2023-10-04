@@ -1,14 +1,26 @@
-# zecurion-test-case
+# Zecurion test case
 
-This template should help get you started developing with Vue 3 in Vite.
+This is test case solution for Zecurion.
+The description of test:
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+Тестовое задание для будущего разработчика в команду Frontend
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+https://codepen.io/i-shornikov/pen/GRNBZvz
+
+Задание:
+1. Создать таблицу, связывающую коллекции между собой
+2. Коллекции должны быть связаны по уникальному ключу id
+3. События должны создаваться на пересечении задачи и даты
+4. Поля должны быть редактируемые
+
+Исходные данные:
+
+    1. Четыре коллекции с данными (Задачи, Даты, Статусы, События)
+    2. Формы заполнения для коллекций (Задачи, Даты, Статусы)
+
+Пример реализации: https://codepen.io/i-shornikov/pen/eYBjpOe
 
 ## Project Setup
 
