@@ -37,5 +37,6 @@ module.exports = {
     semi: ['error', 'always'],
     'no-undef': 0,
     'object-curly-spacing': ['error', 'always'],
+    'vue/no-mutating-props': 0
   }
 };
