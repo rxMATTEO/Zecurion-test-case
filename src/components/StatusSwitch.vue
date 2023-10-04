@@ -25,6 +25,10 @@ const selectedStatus = computed({
 
 function switchStatus() {
   isClicked.value = true;
+  if(!status.value){
+    status.value = props.statuses[0].value;
+  }
+  console.log(status.value);
   logStore.addLog({
     task: props.task,
     date: props.date,

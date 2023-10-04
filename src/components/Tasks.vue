@@ -18,7 +18,7 @@ defineProps({
       <span>{{ date.value }}</span>
     </td>
   </tr>
-  <tr class="list" v-for="task in tasks" :key="task.value">
+  <tr class="list" v-for="task in tasks" :key="task.id">
     <td class="table-data">
       <input type="text" v-model="task.value" />
     </td>
