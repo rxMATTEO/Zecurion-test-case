@@ -1,6 +1,8 @@
 # Zecurion test case
 
 This is test case solution for Zecurion.
+It's a Reactive web application that is table with task management
+
 The description of test:
 
 
