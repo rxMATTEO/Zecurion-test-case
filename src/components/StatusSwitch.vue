@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 const props = defineProps({
   statuses: Array,
@@ -10,8 +10,15 @@ const isClicked = ref(false);
 const emptyMessage = 'Список пуст';
 
 function switchStatus() {
-  isClicked.value = false;
+  isClicked.value = true;
+
 }
+
+const selectedStatus = ref(props.statuses[0].value);
+
+watch(selectedStatus, () => {
+  console.log(selectedStatus.value);
+});
 </script>
 
 <template>
@@ -23,7 +30,7 @@ function switchStatus() {
       +
     </div>
     <div v-else>
-      <select>
+      <select v-model="selectedStatus">
         <option v-for="status in statuses" :key="status">
           {{ status.value }}
         </option>
