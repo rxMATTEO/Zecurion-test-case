@@ -1,4 +1,6 @@
 <script setup>
+import StatusSwitch from "@/components/StatusSwitch.vue";
+
 defineProps({
   tasks: Array,
   dates: Array,
@@ -20,8 +22,8 @@ defineProps({
     <td class="table-data">
       <input type="text" v-model="item.value" />
     </td>
-    <td v-for="date in dates" :key="date.value">
-      Список пуст
+    <td v-for="date in dates" :key="date.value" class="table-data">
+      <StatusSwitch :statuses="statuses" />
     </td>
   </tr>
 </table>
