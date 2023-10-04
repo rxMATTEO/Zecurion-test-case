@@ -7,14 +7,14 @@ defineProps({
 </script>
 
 <template>
-<table class="tasks">
+<table class="tasks" v-if="tasks.length">
   <tr>
     <td class="header">
-      <p>Задачи/даты</p>
+      <span>Задачи/даты</span>
     </td>
   </tr>
   <tr class="list" v-for="item in tasks" :key="item">
-    <td>
+    <td class="list-item">
       <input type="text" v-model="item.value" />
     </td>
   </tr>
@@ -25,12 +25,14 @@ defineProps({
 .tasks {
   border: var(--border);
   .header {
-    padding: 0 40px;
+    text-align: center;
     color: var(--text-secondary);
     border-bottom: 2px solid lightgray;
   }
   .list {
-    padding: 5px 40px;
+    .list-item {
+      padding: 5px 40px;
+    }
   }
 }
 </style>
