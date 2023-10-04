@@ -1,5 +1,7 @@
 <script setup>
+import { useLogStore } from '@/stores/logStore';
 
+const loggerStore = useLogStore();
 </script>
 
 <template>

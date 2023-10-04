@@ -8,6 +8,10 @@ const props = defineProps({
 const isStatusesEmpty = computed(() => props.statuses.length === 0);
 const isClicked = ref(false);
 const emptyMessage = 'Список пуст';
+
+function switchStatus() {
+  isClicked.value = false;
+}
 </script>
 
 <template>
@@ -15,7 +19,7 @@ const emptyMessage = 'Список пуст';
     <div v-if="isStatusesEmpty">
       {{ emptyMessage }}
     </div>
-    <div v-else-if="!isClicked" @click="isClicked = true">
+    <div v-else-if="!isClicked" @click="switchStatus">
       +
     </div>
     <div v-else>
